@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chladni Figures Simulation</title>
+    <style>
+        canvas {
+            display: block;
+            margin: auto;
+            border: 1px solid black;
+        }
+        #controls {
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <button id="test-tone-btn">Play Test Tone</button>
+        <button id="pause-btn">Pause</button>
+        <select id="fft-size">
+            <option value="1024">FFT Size: 1024</option>
+            <option value="2048" selected>FFT Size: 2048</option>
+            <option value="4096">FFT Size: 4096</option>
+        </select>
+        <input type="file" id="audio-file" accept="audio/*">
+    </div>
+    <canvas id="chladniCanvas" width="360" height="640"></canvas> <!-- 9:16 aspect ratio -->
+
+    <script src="cymatics.js"></script> <!-- Link to the JS file -->
+</body>
+</html>
+
